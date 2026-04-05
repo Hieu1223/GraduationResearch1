@@ -1,0 +1,8 @@
+/checkpoints
+/dataset/wiki.train.tokens.processed
+/dataset/processed_essay.csv
+/cache
+/__pycache__/
+*.py[cod]
+*$py.class
+*.txt

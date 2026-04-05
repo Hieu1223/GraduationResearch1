@@ -1,0 +1,59 @@
+cEXT
+
+--- Confusion Matrix (Trait Index: 0) ---
+                | Predicted: 0 | Predicted: 1
+      Actual: 0 |     237      |      0      
+      Actual: 1 |     257      |      0      
+---------------------------------------------
+Accuracy:  47.98%
+Precision: 0.00%
+Recall:    0.00%
+F1-score:  0.00%
+
+cNEU
+
+--- Confusion Matrix (Trait Index: 1) ---
+                | Predicted: 0 | Predicted: 1
+      Actual: 0 |      5       |     251     
+      Actual: 1 |      2       |     236     
+---------------------------------------------
+Accuracy:  48.79%
+Precision: 48.46%
+Recall:    99.16%
+F1-score:  65.10%
+
+cAGR
+
+--- Confusion Matrix (Trait Index: 2) ---
+                | Predicted: 0 | Predicted: 1
+      Actual: 0 |      3       |     234     
+      Actual: 1 |      6       |     251     
+---------------------------------------------
+Accuracy:  51.42%
+Precision: 51.75%
+Recall:    97.67%
+F1-score:  67.65%
+
+cCON
+
+--- Confusion Matrix (Trait Index: 3) ---
+                | Predicted: 0 | Predicted: 1
+      Actual: 0 |     248      |      1      
+      Actual: 1 |     245      |      0      
+---------------------------------------------
+Accuracy:  50.20%
+Precision: 0.00%
+Recall:    0.00%
+F1-score:  0.00%
+
+cOPN
+
+--- Confusion Matrix (Trait Index: 4) ---
+                | Predicted: 0 | Predicted: 1
+      Actual: 0 |      53      |     178     
+      Actual: 1 |      52      |     211     
+---------------------------------------------
+Accuracy:  53.44%
+Precision: 54.24%
+Recall:    80.23%
+F1-score:  64.72%
