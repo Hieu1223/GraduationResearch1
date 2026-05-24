@@ -1,0 +1,187 @@
+## Task Overview
+
+You are given:
+- A **user text**
+- Two explainers (**Explainer A and Explainer B**) analyzing Conscientiousness
+
+Your task:
+1. Compare both explainers across Emotion, Cognition, and Sociality
+2. Evaluate which explainer is more grounded in the text
+3. Output final classification: **HIGH or LOW Conscientiousness**
+
+---
+
+# 1. Comparative Analysis (A vs B)
+
+For each element:
+
+- Identify agreements and disagreements
+- Check alignment with **exact phrases from the user text**
+- Evaluate depth, specificity, and evidence quality
+- Penalize over-interpretation and projection
+
+---
+
+## A. Emotion
+
+Compare how each explainer interprets emotional signals related to conscientious behavior:
+- responsibility-related emotions (guilt, pride, frustration)
+- motivation vs apathy toward tasks
+- emotional response to obligations
+
+### 🚫 Critical Anti-Error Rule (Emotion)
+
+Do NOT treat the following as HIGH or LOW Conscientiousness by themselves:
+- mild stress or frustration
+- casual regret (“I should have…”)
+- nostalgia or reflection
+- temporary laziness or tiredness
+- mood fluctuations in stream-of-consciousness writing
+
+👉 These are **non-diagnostic unless tied to sustained behavior patterns**
+
+---
+
+## B. Cognition
+
+Compare:
+- goal-directed thinking vs drifting
+- planning vs absence of planning
+- consistency of attention to tasks
+
+### 🚫 Critical Anti-Error Rule (Cognition)
+
+Do NOT interpret as Conscientiousness signals:
+- stream-of-consciousness writing style
+- topic switching or associative thinking
+- environmental distraction in text
+- informal or unstructured narrative flow
+- mention of multiple activities or thoughts
+
+👉 These are **format artifacts, not trait indicators**
+
+---
+
+## C. Sociality
+
+Compare:
+- responsibility toward others (duties, obligations, commitments)
+- follow-through in social/work expectations
+- reliability in interpersonal context
+
+### 🚫 Critical Anti-Error Rule (Sociality)
+
+Do NOT treat as HIGH or LOW Conscientiousness:
+- frequency of social thoughts
+- desire for friends or relationships
+- casual mention of others
+- social comparison or relationship focus
+
+👉 Only consider sociality when it reflects **duty, obligation, or reliability behavior**
+
+---
+
+# 2. Core Conscientiousness Decision Rules (CRITICAL)
+
+Trait must be inferred from:
+
+> **relationship to duty, obligation, and self-regulation under expectation**
+
+NOT from:
+- writing structure
+- topic randomness
+- emotional tone
+- verbosity or coherence
+
+---
+
+# 🔴 HIGH Conscientiousness Criteria (must satisfy multiple signals)
+
+Classify as HIGH ONLY if at least **2+ strong indicators are present**:
+
+## 1. Internalized Duty System
+- explicit guilt about not meeting responsibilities
+- strong self-correction pressure (“I must fix this”, “I need to do better”)
+- persistent awareness of obligations as moral pressure
+
+## 2. Structured Self-Regulation
+- clear planning or prioritization systems
+- consistent attempt to organize time/tasks
+- repeated return to task completion strategy
+
+## 3. Execution Orientation
+- linking intentions to concrete action steps
+- sustained focus on completing obligations
+- evidence of follow-through mindset, not just thoughts
+
+---
+
+# 🟢 LOW Conscientiousness Criteria (must show stability of drift or low duty pressure)
+
+Classify as LOW if the text shows:
+
+## 1. Low Duty Pressure
+- absence of guilt-driven correction loops
+- weak or absent sense of obligation urgency
+- acceptance of “just getting by”
+
+## 2. Drift-Based Attention
+- attention shifts without corrective effort
+- task mentions are brief and not operationalized
+- no sustained prioritization system
+
+## 3. Passive Task Relationship
+- obligations are mentioned but not structured into action
+- goals remain abstract or situational
+- no consistent execution tracking
+
+---
+
+# 🚫 CRITICAL FALSE POSITIVE RULE (IMPORTANT)
+
+Do NOT infer HIGH Conscientiousness from:
+- mentioning plans or intentions (“I will do homework later”)
+- awareness of deadlines or time
+- saying “I should” or “I need to”
+- brief guilt or regret statements
+
+👉 These are **weak signals unless repeatedly converted into structured action**
+
+---
+
+# 3. Decision Calibration Rule
+
+- If HIGH indicators are weak, isolated, or non-repetitive → choose LOW
+- If evidence is mixed → prefer LOW (avoid over-attribution)
+- Ignore writing style and focus only on **duty-to-action consistency**
+
+---
+
+# 4. Overall Evaluation
+
+Choose which explainer (A or B) better reflects the actual trait in the text:
+
+Criteria:
+- grounded reasoning
+- correct interpretation of duty vs intention
+- avoidance of over-interpretation
+- correct handling of stream-of-consciousness noise
+
+---
+
+# 5. Final Output
+
+Return exactly ONE label:
+
+- HIGH
+- LOW
+
+---
+
+# Input
+
+Text: {text}
+
+Explainer A: {explain_1}
+
+Explainer B: {explain_2}

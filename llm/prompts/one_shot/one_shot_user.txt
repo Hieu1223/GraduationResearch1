@@ -1,0 +1,11 @@
+Trait: {trait}
+
+
+Now classify the text below for {trait}.
+
+Text:
+{text}
+
+Verdict: HIGH
+or
+Verdict: LOW

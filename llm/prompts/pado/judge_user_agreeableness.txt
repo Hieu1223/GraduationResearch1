@@ -1,0 +1,29 @@
+Follow these steps to perform your analysis:
+1. Comparative Analysis:
+a) For each element (emotion, cognition, sociality), clearly identify points of agreement and disagreement between the two explainers' analyses.
+b) For each element, compare how well each explainer's analysis aligns with specific examples or phrases from the user's text.
+c) Evaluate the depth, detail, and evidence provided by each explainer to support their conclusions.
+
+2. Overall Evaluation:
+a) Based on the comparative analysis, determine which explainer's overall analysis better reflects the user's trait.
+b) If both explainers reach similar conclusions, assess which analysis provides more comprehensive insights and stronger supporting evidence.
+
+3. Final Judgement: Conclude whether the user's trait is HIGH or LOW.
+
+Critical reasoning rules for Agreeableness:
+- **Distinguish Situational Venting from Interpersonal Hostility:** Expressing frustration about constraints, strict rules, or annoying family dynamics is a normal venting mechanism and does not automatically equal Low Agreeableness. Look closely for instances of perspective-taking or downstream empathy within those complaints (e.g., validating the other party's motives or softening the critique). If the underlying tone lacks genuine malice or an intent to harm relationships, do not default to a low score.
+- **Evaluate Prosocial Wrapping and Relational Warmth:** Pay close attention to how the writer frames their interaction with the reader, researcher, or the task itself. Proactive politeness, warm sign-offs, wishing the audience well, or viewing a forced task with cooperative good humor are strong indicators of HIGH Agreeableness.
+- **Separate Conversational Self-Focus from Structural Selfishness:** In raw or stream-of-consciousness writing, a high frequency of "I" or "me" statements typically reflects internal cognitive processing or situational self-reflection rather than narcissistic self-absorption. Evaluate the *attitude* directed outward: is the baseline worldview fundamentally collaborative and open, or is it cynical, entitled, and dismissive of others?
+- **Identify True Low Agreeableness via Cold Detachment:** True Low Agreeableness is characterized by a flat, uncooperative, or cynical baseline. Look for persistent hyper-criticism of peers, viewing other people strictly as a nuisance or a utility, a complete absence of altruistic concern, or a cold emotional detachment from interpersonal bonds.
+
+Output format:
+1. Comparative Analysis
+- compare and evaluate each element: maximum 3 sentences for each element, with specific references to the user's text and the explainers' analyses. Be objective and detailed in your comparison.
+2. Overall Evaluation
+- Exactly 1 sentence to show overall comparison results
+3. Final Judgement
+- (High/Low)
+
+Text: {text}
+Explainer A: {explain_1}
+Explainer B: {explain_2}

@@ -1,0 +1,159 @@
+## Task: Compare Two Explainers and Classify Neuroticism
+
+You are given:
+- A user text
+- Explainer A and Explainer B analyzing Neuroticism
+
+Your job:
+1. Compare both explainers
+2. Evaluate which is more accurate and grounded in the text
+3. Output a final classification: **HIGH or LOW Neuroticism**
+
+---
+
+# 1. Comparative Analysis (A vs B)
+
+Analyze the following three dimensions:
+
+---
+
+## A. Emotion
+
+Compare:
+- emotional intensity
+- emotional stability vs fluctuation
+- presence of distress, negativity, or calmness
+
+### 🚫 Critical rule (avoid false HIGH triggers)
+
+Do NOT treat the following as HIGH Neuroticism by themselves:
+- mild sadness or nostalgia
+- irritation or frustration in isolation
+- self-reflection or introspection
+- casual worry or uncertainty
+- social comparison
+
+These are **LOW-compatible or neutral emotional states unless they escalate or dominate the text**
+
+---
+
+## B. Cognition
+
+Compare:
+- thought organization (structured vs scattered)
+- presence of rumination loops
+- self-referential negative spirals
+
+### 🚫 Critical rule
+
+Do NOT interpret as neuroticism:
+- stream-of-consciousness writing
+- topic switching or associative thinking
+- planning lists or daily scheduling
+- casual introspection or reflection
+
+Only consider cognition as HIGH Neuroticism if:
+- thoughts repeatedly return to distressing interpretations
+- there is escalation of negative thinking across sentences
+- cognition is clearly driven by emotional instability
+
+---
+
+## C. Sociality
+
+Compare:
+- social comparison patterns
+- belonging needs
+- interpersonal tension or sensitivity
+
+### 🚫 Critical rule
+
+Do NOT treat as HIGH Neuroticism:
+- desire for friends, belonging, or connection
+- comparing oneself to others
+- mild jealousy, admiration, or insecurity
+
+Only treat as HIGH if:
+- social comparison is obsessive or self-devaluing
+- interpersonal thoughts trigger sustained distress
+- relationships are framed as emotionally destabilizing
+
+---
+
+# 2. Symmetric Trait Decision Rules (VERY IMPORTANT)
+
+You must evaluate HIGH and LOW Neuroticism symmetrically.
+
+---
+
+## 🔴 HIGH Neuroticism requires ALL of the following:
+
+At least **2 or more strong indicators**:
+
+- sustained negative emotional intensity (not brief or mild)
+- emotional escalation or spiraling across sentences
+- cognitive rumination loops driven by distress
+- catastrophic or self-devaluing interpretations
+- inability to stabilize emotional state within the text
+
+ IMPORTANT:
+Do NOT classify as HIGH based on:
+- isolated frustration
+- mild sadness
+- disorganized writing alone
+- normal life stress or reflection
+
+---
+
+##  LOW Neuroticism is defined by POSITIVE STABILITY SIGNALS:
+
+LOW must be supported by evidence of:
+
+- emotionally neutral or mildly negative tone without escalation
+- ability to shift topics without distress spirals
+- presence of reflection without emotional overwhelm
+- normal social comparison without self-devaluation loops
+- absence of sustained negative cognitive-emotional feedback loops
+
+ IMPORTANT:
+LOW is NOT just “absence of HIGH signals”
+LOW must show **emotional and cognitive stability patterns**
+
+---
+
+# 3. Decision Calibration Rule
+
+- If HIGH indicators are weak, isolated, or ambiguous → choose LOW
+- Treat uncertainty language (“I guess”, “maybe”, “I wonder”) as neutral
+- Do NOT infer neuroticism from normal introspection or planning behavior
+
+---
+
+# 4. Overall Evaluation
+
+Decide:
+- Which explainer (A or B) better reflects the actual trait in the text
+
+Criteria:
+- grounded reasoning
+- correct use of evidence
+- avoidance of over-interpretation
+
+---
+
+# 5. Final Output
+
+Return exactly ONE label:
+
+- HIGH
+- LOW
+
+---
+
+# Input Format
+
+Text: {text}
+
+Explainer A: {explain_1}
+
+Explainer B: {explain_2}

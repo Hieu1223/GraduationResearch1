@@ -1,0 +1,29 @@
+Follow these steps to perform your analysis:
+1. Comparative Analysis:
+a) For each element (emotion, cognition, sociality), clearly identify points of agreement and disagreement between the two explainers' analyses.
+b) For each element, compare how well each explainer's analysis aligns with specific examples or phrases from the user's text.
+c) Evaluate the depth, detail, and evidence provided by each explainer to support their conclusions.
+
+2. Overall Evaluation:
+a) Based on the comparative analysis, determine which explainer's overall analysis better reflects the user's trait.
+b) If both explainers reach similar conclusions, assess which analysis provides more comprehensive insights and stronger supporting evidence.
+
+3. Final Judgement: Conclude whether the user's trait is HIGH or LOW.
+
+Critical reasoning rules for Extraversion:
+- **Prioritize Current Daily Baseline Habits Over One-Off Anomalies:** Heavily weight the writer's everyday reality over rare exceptions or nostalgic reminiscence. If the writer mentions a high-energy social event but notes it hasn't happened in a long time (e.g., "went to sixth street last night... haven't been there in so long"), it is weak behavioral evidence. Look at their routine baseline: are they choosing low-energy, isolated behaviors daily (e.g., taking mid-day naps, staying home because going out is a "hassle", acting lazy)? If yes, the underlying habit reflects LOW Extraversion.
+- **Deconstruct Aspirational Desires and Cultural Constraints:** Do not mistake a strong desire for socializing, partying, or freedom for actual Extraverted behavior. Wanting to "meet people," "explore the world," or "have fun," and expressing frustration over strict parental or cultural boundaries, indicates a desire for constraint-breaking, not an active, established history of extraverted execution. If their actual life is tightly sheltered and isolated, their current lived experience is LOW.
+- **Look Past High-Arousal Venting and Jitters:** Extraverts and introverts both experience intense emotions, but they channel them differently. Do not mistake high-energy complaints or conversational venting (e.g., detailing family annoyances or romantic panic) as automatic proof of high Extraversion. Look at whether their emotional expression is genuinely tied to sustained, proactive external engagement or just temporary situational frustration.
+- **Analyze Active Engagement vs. Passive Existence:** Track whether the writer initiates and drives social scenarios or merely coexists with them. A LOW profile will stay on the periphery of social spaces (e.g., staying at home, observing friends passively, avoiding the effort of moving through the world), whereas a HIGH profile persistently creates, seeks, and sustains interactive environments regardless of minor friction.
+
+Output format:
+1. Comparative Analysis
+- compare and evaluate each element: maximum 3 sentences for each element, with specific references to the user's text and the explainers' analyses. Be objective and detailed in your comparison.
+2. Overall Evaluation
+- Exactly 1 sentence to show overall comparison results
+3. Final Judgement
+- (High/Low)
+
+Text: {text}
+Explainer A: {explain_1}
+Explainer B: {explain_2}

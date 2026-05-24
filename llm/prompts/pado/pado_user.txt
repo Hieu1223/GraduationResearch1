@@ -1,0 +1,25 @@
+Based on the given text, predict the personality of the person who wrote it.
+Use your own personality traits as a reference.
+Do you think the user is similar to you or opposite to you in terms of {trait} (one of the Big Five personality traits)?
+
+Important distinctions to make:
+- Focus on the person's ACTUAL, HABITUAL behavior, not their desires or aspirations.
+- Distinguish between what the person WISHES they could do vs. what they ACTUALLY do day-to-day.
+- Frustration about lacking freedom or opportunity is NOT evidence of the trait itself.
+- Rare or exceptional events should be weighted less than baseline, default behavior.
+
+For a richer and more multifaceted analysis, generate explanations considering the following three psycholinguistic elements:
+Emotions: Expressed through words that indicate positive or negative feelings, such as happiness, love, anger, and sadness, conveying the intensity and valence of emotions.
+Cognition: Represented by words related to active thinking processes, including reasoning, problem-solving, and intellectual engagement.
+Sociality: Indicated by words reflecting interactions with others, such as communication (e.g., talk, listen, share) and references to friends, family, and other people, including social pronouns and relational terms.
+
+Output format:
+**{trait}**
+1. Emotions
+- explanation
+2. Cognition
+- explanation
+3. Sociality
+- explanation
+
+Text: {text}

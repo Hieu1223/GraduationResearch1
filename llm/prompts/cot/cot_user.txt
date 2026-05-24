@@ -1,0 +1,13 @@
+Trait: {trait}
+
+Text:
+{text}
+
+Step-by-step:
+1. Which phrases or behaviours relate to {trait}?
+2. Does each signal point toward HIGH or LOW? Why?
+3. Weighing all signals, which label is better supported?
+
+Verdict: HIGH
+or
+Verdict: LOW
